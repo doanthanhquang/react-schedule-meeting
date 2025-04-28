@@ -1,4 +1,4 @@
-import{isValid as e,startOfMonth as t,format as r,differenceInMinutes as a,addMinutes as o,isSameDay as n,isSameMinute as i,isPast as l,isAfter as c,subMonths as s,addMonths as d,subDays as m,addDays as g,isBefore as b,isEqual as u}from"date-fns";import*as p from"react";import x,{useState as v,useEffect as T}from"react";import f from"color";import y from"react-calendar";import{setup as h,styled as _}from"goober";import{shouldForwardProp as w}from"goober/should-forward-prop";const k=({direction:e})=>p.createElement("svg",{xmlns:"http://www.w3.org/2000/svg",width:"26",height:"26",viewBox:"0 0 512 512"},p.createElement("path",{fill:"none",stroke:"currentColor",strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:"48",d:"back"===e?"M328 112L184 256l144 144":"M184.001 400L328.001 256L184.001 112"}));h(x.createElement,void 0,void 0,w((e=>"$"!==e[0])));const E=_(y)`
+import{isValid as e,startOfMonth as t,format as r,differenceInMinutes as a,addMinutes as o,isSameDay as n,isSameMinute as i,isPast as l,isAfter as c,subMonths as d,addMonths as s,subDays as m,addDays as g,isBefore as b,isEqual as u}from"date-fns";import*as p from"react";import x,{useState as v,useEffect as T}from"react";import f from"color";import y from"react-calendar";import{setup as h,styled as _}from"goober";import{shouldForwardProp as w}from"goober/should-forward-prop";const k=({direction:e})=>p.createElement("svg",{xmlns:"http://www.w3.org/2000/svg",width:"26",height:"26",viewBox:"0 0 512 512"},p.createElement("path",{fill:"none",stroke:"currentColor",strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:"48",d:"back"===e?"M328 112L184 256l144 144":"M184.001 400L328.001 256L184.001 112"}));h(x.createElement,void 0,void 0,w((e=>"$"!==e[0])));const E=_(y)`
   &.react-calendar,
   &.react-calendar *,
   &.react-calendar *:before,
@@ -195,7 +195,7 @@ import{isValid as e,startOfMonth as t,format as r,differenceInMinutes as a,addMi
     opacity: 0.8;
     background-color: ${({selected:e})=>e?"rgba(var(--primary-color-rgb), 1)":"rgba(var(--background-color-contrast-rgb), 0.06)"};
   }
-`,N=_("button")`
+`,B=_("button")`
   padding: 12px 16px;
   margin: 4px;
   border: none;
@@ -212,11 +212,11 @@ import{isValid as e,startOfMonth as t,format as r,differenceInMinutes as a,addMi
   :hover {
     opacity: 0.8;
   }
-`,B=_("div")`
+`,N=_("div")`
   display: flex;
   width: 100%;
   align-items: center;
-`,L=_("button")`
+`;_("button")`
   padding: 8px 24px;
   border: none;
   background-color: rgb(0, 0, 0, 0);
@@ -233,14 +233,14 @@ import{isValid as e,startOfMonth as t,format as r,differenceInMinutes as a,addMi
   &:hover {
     background-color: rgba(var(--background-color-contrast-rgb), 0.06);
   }
-`,$=({confirmState:e,onStartTimeSelect:t,startTimeEvent:a,selected:o,onCancelClicked:n,format_startTimeFormatString:i,lang_confirmButtonText:l,lang_cancelButtonText:c,lang_selectedButtonText:s,locale:d})=>x.createElement(B,{className:"rsm-start-time-item"},x.createElement(D,{type:"button",className:"rsm-confirm-button",selected:Boolean(o||e),onClick:t},e&&!o&&`${l} `,o&&`${s} `,r(a.startTime,i,{locale:d})),(e||o)&&x.createElement(L,{type:"button",className:"rsm-cancel-button",onClick:n},c)),F=_("div")`
+`;const L=({confirmState:e,onStartTimeSelect:t,startTimeEvent:a,selected:o,onCancelClicked:n,format_startTimeFormatString:i,lang_confirmButtonText:l,lang_cancelButtonText:c,lang_selectedButtonText:d,locale:s})=>x.createElement(N,{className:"rsm-start-time-item"},x.createElement(D,{type:"button",className:"rsm-confirm-button",selected:Boolean(o||e),onClick:t},r(a.startTime,i,{locale:s}))),$=_("div")`
   position: relative;
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
   padding-bottom: 24px;
   padding-top: 16px;
-`,z=_("div")`
+`,F=_("div")`
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -252,7 +252,7 @@ import{isValid as e,startOfMonth as t,format as r,differenceInMinutes as a,addMi
       opacity: 0.5;
     }
   }
-`,j=_("div")`
+`,z=_("div")`
   position: absolute;
   width: 100%;
   height: 24px;
@@ -268,20 +268,20 @@ import{isValid as e,startOfMonth as t,format as r,differenceInMinutes as a,addMi
     bottom: 0;
     background: linear-gradient(0deg, rgba(var(--background-color-rgb), 1), rgba(var(--background-color-rgb), 0));
   }
-`,R=_("div")`
+`,j=_("div")`
   flex-shrink: 0;
   flex: 1;
   padding: 0.5px;
   margin: 0px 8px;
   position: relative;
   background: ${({makeTransparent:e})=>e?"transparent":"rgba(var(--background-color-contrast-rgb), 0.05)"};
-`,G=_("p")`
+`,R=_("p")`
   margin: 0;
   opacity: 0.5;
   margin-bottom: 24px;
   font-size: 18px;
   color: rgba(var(--text-color-rgb), 1);
-`,A=_("div")`
+`,G=_("div")`
   height: 100%;
   flex: 1;
   width: 100%;
@@ -289,7 +289,7 @@ import{isValid as e,startOfMonth as t,format as r,differenceInMinutes as a,addMi
   justify-content: center;
   align-items: center;
   flex-direction: column;
-`,M=_(D)`
+`,A=_(D)`
   border: none;
   padding: 6px 18px;
   width: auto;
@@ -309,13 +309,13 @@ import{isValid as e,startOfMonth as t,format as r,differenceInMinutes as a,addMi
     margin-left: 14px;
     margin-right: -4px;
   }
-`,I=_(G)`
+`,M=_(R)`
   font-size: 90%;
   font-weight: 700;
   padding: 3px 10px;
   border-radius: var(--border-radius);
   border: 1px solid rgba(var(--background-color-contrast-rgb), 0.5);
-`,O=({skipConfirmCheck:e,selectedDay:t,selectedStartTime:a,startTimeListItems:o=[],onStartTimeSelect:n,emptyListContentEl:i,lang_emptyListText:l,format_startTimeFormatString:c,lang_confirmButtonText:s,lang_cancelButtonText:d,lang_goToNextAvailableDayText:m,lang_noFutureTimesText:g,lang_selectedButtonText:b,onGoToNextAvailableDayClick:u,nextFutureStartTimeAvailable:p,format_nextFutureStartTimeAvailableFormatString:f,startTimeListStyle:y,setSelectedStartTime:h,locale:_})=>{const[w,E]=v(-1);T((()=>{E(-1)}),[t]);const S=x.createElement(A,null,x.createElement(x.Fragment,null,i||x.createElement(G,{className:"rsm-empty-list-text"},l),p?x.createElement(M,{type:"button",selected:!0,className:"rsm-next-available-date-button",onClick:u},x.createElement("p",null,x.createElement("small",null,m),x.createElement("br",null),r(p,f,{locale:_})),x.createElement(k,{direction:"forward"})):x.createElement(I,{className:"rsm-no-future-times-text"},g)));return x.createElement(x.Fragment,null,0===o.length?S:"scroll-list"===y?x.createElement(x.Fragment,null,x.createElement(j,{className:"top"}),x.createElement(j,{className:"bottom"}),x.createElement(F,null,o.map(((t,r)=>x.createElement(x.Fragment,{key:r},x.createElement($,{locale:_,lang_selectedButtonText:b,lang_confirmButtonText:s,lang_cancelButtonText:d,format_startTimeFormatString:c,onCancelClicked:()=>(e=>{E(-1),a&&e.startTime.getTime()===a&&h(void 0)})(t),selected:Boolean(a&&a===t.startTime.getTime()),confirmState:r===w,startTimeEvent:t,onStartTimeSelect:()=>((t,r)=>{e||w===r?(n(t),E(-1)):E(r)})(t,r)}),r!==o.length-1&&x.createElement(R,{makeTransparent:w===r||w===r+1})))))):x.createElement(z,{className:a?"has-selection":""},o.map(((e,t)=>x.createElement(N,{key:t,type:"button",className:a&&a===e.startTime.getTime()?"is-selected":"",onClick:()=>n(e)},r(e.startTime,c,{locale:_}))))))},U=_("div")`
+`,I=({skipConfirmCheck:e,selectedDay:t,selectedStartTime:a,startTimeListItems:o=[],onStartTimeSelect:n,emptyListContentEl:i,lang_emptyListText:l,format_startTimeFormatString:c,lang_confirmButtonText:d,lang_cancelButtonText:s,lang_goToNextAvailableDayText:m,lang_noFutureTimesText:g,lang_selectedButtonText:b,onGoToNextAvailableDayClick:u,nextFutureStartTimeAvailable:p,format_nextFutureStartTimeAvailableFormatString:f,startTimeListStyle:y,setSelectedStartTime:h,locale:_})=>{const[w,E]=v(-1);T((()=>{E(-1)}),[t]);const S=x.createElement(G,null,x.createElement(x.Fragment,null,i||x.createElement(R,{className:"rsm-empty-list-text"},l),p?x.createElement(A,{type:"button",selected:!0,className:"rsm-next-available-date-button",onClick:u},x.createElement("p",null,x.createElement("small",null,m),x.createElement("br",null),r(p,f,{locale:_})),x.createElement(k,{direction:"forward"})):x.createElement(M,{className:"rsm-no-future-times-text"},g)));return x.createElement(x.Fragment,null,0===o.length?S:"scroll-list"===y?x.createElement(x.Fragment,null,x.createElement(z,{className:"top"}),x.createElement(z,{className:"bottom"}),x.createElement($,null,o.map(((e,t)=>x.createElement(x.Fragment,{key:t},x.createElement(L,{locale:_,lang_selectedButtonText:b,lang_confirmButtonText:d,lang_cancelButtonText:s,format_startTimeFormatString:c,onCancelClicked:()=>(e=>{E(-1),a&&e.startTime.getTime()===a&&h(void 0)})(e),selected:Boolean(a&&a===e.startTime.getTime()),confirmState:t===w,startTimeEvent:e,onStartTimeSelect:()=>(e=>{n(e)})(e)}),t!==o.length-1&&x.createElement(j,{makeTransparent:w===t||w===t+1})))))):x.createElement(F,{className:a?"has-selection":""},o.map(((e,t)=>x.createElement(B,{key:t,type:"button",className:a&&a===e.startTime.getTime()?"is-selected":"",onClick:()=>n(e)},r(e.startTime,c,{locale:_}))))))},O=_("div")`
   width: 100%;
   display: flex;
   align-items: center;
@@ -328,7 +328,7 @@ import{isValid as e,startOfMonth as t,format as r,differenceInMinutes as a,addMi
   --primary-color-rgb: ${({$primaryColorRGB:e})=>e};
   --primary-color-contrast-rgb: ${({$primaryColorContrastRGB:e})=>e};
   --border-radius: ${({$borderRadius:e})=>e}px;
-`,H=_("div")`
+`,U=_("div")`
   display: flex;
   border-radius: var(--border-radius);
   background: rgba(var(--background-color-rgb), 1);
@@ -343,7 +343,7 @@ import{isValid as e,startOfMonth as t,format as r,differenceInMinutes as a,addMi
     padding: 8px;
     margin: 8px;
   }
-`,V=_("div")`
+`,H=_("div")`
   width: 1px;
   background: rgba(0, 0, 0, 0.1);
   margin: 16px;
@@ -351,34 +351,34 @@ import{isValid as e,startOfMonth as t,format as r,differenceInMinutes as a,addMi
     width: auto;
     height: 1px;
   }
-`,W=_("div")`
+`,V=_("div")`
   flex: 1;
-`,q=_("div")`
+`,W=_("div")`
   flex: 1;
   overflow: hidden;
   position: relative;
   @media (max-width: 768px) {
     min-height: 301px;
   }
-`,J=_("div")`
+`,q=_("div")`
   position: absolute;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-`,K=_("h3")`
+`,J=_("h3")`
   margin: 0;
   padding: 0;
   font-weight: 700;
   font-size: 24px;
   color: rgba(var(--text-color-rgb), 1);
-`,P=_("div")`
+`,K=_("div")`
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 6px;
-`,Q=_("button")`
+`,P=_("button")`
   outline: none;
   background: none;
   border: none;
@@ -395,4 +395,4 @@ import{isValid as e,startOfMonth as t,format as r,differenceInMinutes as a,addMi
     opacity: 0.7;
     background: rgba(var(--background-color-contrast-rgb), 0.06);
   }
-`,X=({availableTimeslots:e=[],backgroundColor:t="#ffffff",borderRadius:b=0,className:u,defaultDate:p,emptyListContentEl:y,eventDurationInMinutes:h=30,eventStartTimeSpreadInMinutes:_=0,format_nextFutureStartTimeAvailableFormatString:w="cccc, LLLL do",format_selectedDateDayTitleFormatString:E="cccc, LLLL do",format_selectedDateMonthTitleFormatString:S="LLLL yyyy",format_startTimeFormatString:D="h:mm a",lang_cancelButtonText:N="Cancel",lang_confirmButtonText:B="Confirm",lang_emptyListText:L="No times available",lang_goToNextAvailableDayText:$="Next Available",lang_noFutureTimesText:F="No future times available",lang_selectedButtonText:z="Selected:",locale:j,onNoFutureTimesAvailable:R,onSelectedDayChange:G,onStartTimeSelect:A,primaryColor:M="#3f5b85",scheduleMeetingStyles:I,selectedStartTime:X,skipConfirmCheck:Y=!1,startTimeListStyle:Z="grid",textColor:ee})=>{const te=f(M).rgb().array().join(","),re=f(t).rgb().array().join(","),ae=f(t).isDark(),oe=ee||(ae?"255, 255, 255":"34, 34, 34"),ne=f(M).isDark()?"255, 255, 255":"34, 34, 34",ie=ae?"255, 255, 255":"34, 34, 34",le=ae?f(M).lighten(.5).rgb().array().join(","):f(M).darken(.5).rgb().array().join(","),[ce,se]=v(X?X.getTime():void 0),[de,me]=v(new Date),[ge,be]=v([]),[ue,pe]=v([]),[xe,ve]=v(),[Te,fe]=v([]);T((()=>{se(X?X.getTime():void 0)}),[X]),T((()=>{const t=[...e];t.sort(((e,t)=>new Date(e.startTime).getTime()-new Date(t.startTime).getTime())),fe(t)}),[e]);T((()=>{const e=[];for(const t of Te){const r=a(new Date(t.endTime),new Date(t.startTime));let n=Math.floor(r/(h+_))-1;for(;n>=0;){const r={availableTimeslot:t,startTime:o(new Date(t.startTime),n*(h+_))};e.push(r),n--}}p&&me(p);const t=e.sort(((e,t)=>e.startTime.getTime()-t.startTime.getTime()));be(t)}),[Te,h,_,p]),T((()=>{var e;const t=[];for(const e of ge)n(e.startTime,de)&&0===t.filter((t=>i(t.startTime,e.startTime))).length&&(l(e.startTime)||t.push(e));const r=t.sort(((e,t)=>e.startTime.getTime()-t.startTime.getTime())),a=null===(e=ge.find((e=>c(e.startTime,de))))||void 0===e?void 0:e.startTime;ge.length>0&&R&&!a&&0===r.length&&R(de),ve(a),pe(r)}),[de,ge]);return x.createElement(U,{className:u,$primaryColorRGB:te,$borderRadius:b,style:I,$backgroundColorContrastRGB:ie,$textColorRGB:oe,$backgroundColorRGB:re,$primaryColorContrastRGB:ne,$calendarColoredTextRGB:le},x.createElement(H,null,x.createElement(W,null,x.createElement(P,null,x.createElement(Q,{type:"button",className:"rsm-arrow-button",onClick:()=>{me(s(de,1))}},x.createElement(k,{direction:"back"})),x.createElement(K,{className:"rsm-date-title"},r(de,S,{locale:j})),x.createElement(Q,{type:"button",className:"rsm-arrow-button",onClick:()=>{me(d(de,1))}},x.createElement(k,{direction:"forward"}))),x.createElement(C,{locale:j,selectedDay:de,startTimeEventsList:ge,onDaySelected:e=>{me(e),G&&G(e)}})),x.createElement(V,null),x.createElement(q,null,x.createElement(J,null,x.createElement(P,null,x.createElement(Q,{type:"button",className:"rsm-arrow-button",onClick:()=>{me(m(de,1))}},x.createElement(k,{direction:"back"})),x.createElement(K,{className:"rsm-date-title"},r(de,E,{locale:j})),x.createElement(Q,{type:"button",className:"rsm-arrow-button",onClick:()=>{me(g(de,1))}},x.createElement(k,{direction:"forward"}))),x.createElement(O,{skipConfirmCheck:Y,selectedDay:de,selectedStartTime:ce,locale:j,format_nextFutureStartTimeAvailableFormatString:w,nextFutureStartTimeAvailable:xe,lang_goToNextAvailableDayText:$,lang_noFutureTimesText:F,onGoToNextAvailableDayClick:()=>{xe&&me(xe)},lang_confirmButtonText:B,lang_cancelButtonText:N,lang_emptyListText:L,lang_selectedButtonText:z,emptyListContentEl:y,onStartTimeSelect:e=>{const t=(e=>{const t=[null,null],r=a(e.startTime,new Date(e.availableTimeslot.startTime));if(0!==r){const a={oldId:e.availableTimeslot.id,startTime:e.availableTimeslot.startTime,endTime:o(new Date(e.availableTimeslot.startTime),r)};t[0]=a}const n=o(new Date(e.availableTimeslot.startTime),r+h);if(0!==a(n,new Date(e.availableTimeslot.endTime))){const r={oldId:e.availableTimeslot.id,startTime:n,endTime:e.availableTimeslot.endTime};t[1]=r}return t})(e),r=Object.assign(Object.assign({},e),{splitTimeslot:t,resetDate:()=>me(p||new Date),resetSelectedTimeState:()=>se(void 0)});se(e.startTime.getTime()),A&&A(r)},startTimeListItems:ue,format_startTimeFormatString:D,startTimeListStyle:Z,setSelectedStartTime:se})))))};function Y(e,t){if(!e||!t)return[];const r=[...e],a=[...t];r.sort(((e,t)=>new Date(e.startTime).getTime()-new Date(t.startTime).getTime()));let o=0;for(;o<r.length;){const e=r[o];try{const t=new Date(e.startTime),n=new Date(e.endTime);"string"==typeof e.startTime&&(e.startTime=t),"string"==typeof e.endTime&&(e.endTime=n);for(const i of a)try{const a=new Date(i.startTime),l=new Date(i.endTime);if("string"==typeof i.startTime&&(i.startTime=a),"string"==typeof i.endTime&&(i.endTime=l),b(a,t)||u(a,t))b(t,l)&&(b(l,n)?e.startTime=l:(r.splice(o,1),o--));else if(b(a,n))if(b(l,n)){const t=Object.assign(Object.assign({},e),{startTime:l});e.endTime=a,r.splice(o+1,0,t),o--}else e.endTime=a}catch(e){throw console.error("Invalid Date for unavailable slot: ",i),e}}catch(t){throw console.error("Invalid Date for available slot: ",e),t}o++}return r}export{X as ScheduleMeeting,Y as timeSlotDifference};
+`,Q=({availableTimeslots:e=[],backgroundColor:t="#ffffff",borderRadius:b=0,className:u,defaultDate:p,emptyListContentEl:y,eventDurationInMinutes:h=30,eventStartTimeSpreadInMinutes:_=0,format_nextFutureStartTimeAvailableFormatString:w="cccc, LLLL do",format_selectedDateDayTitleFormatString:E="cccc, LLLL do",format_selectedDateMonthTitleFormatString:S="LLLL yyyy",format_startTimeFormatString:D="h:mm a",lang_cancelButtonText:B="Cancel",lang_confirmButtonText:N="Confirm",lang_emptyListText:L="No times available",lang_goToNextAvailableDayText:$="Next Available",lang_noFutureTimesText:F="No future times available",lang_selectedButtonText:z="Selected:",locale:j,onNoFutureTimesAvailable:R,onSelectedDayChange:G,onStartTimeSelect:A,primaryColor:M="#3f5b85",scheduleMeetingStyles:Q,selectedStartTime:X,skipConfirmCheck:Y=!1,startTimeListStyle:Z="grid",textColor:ee})=>{const te=f(M).rgb().array().join(","),re=f(t).rgb().array().join(","),ae=f(t).isDark(),oe=ee||(ae?"255, 255, 255":"34, 34, 34"),ne=f(M).isDark()?"255, 255, 255":"34, 34, 34",ie=ae?"255, 255, 255":"34, 34, 34",le=ae?f(M).lighten(.5).rgb().array().join(","):f(M).darken(.5).rgb().array().join(","),[ce,de]=v(X?X.getTime():void 0),[se,me]=v(new Date),[ge,be]=v([]),[ue,pe]=v([]),[xe,ve]=v(),[Te,fe]=v([]);T((()=>{de(X?X.getTime():void 0)}),[X]),T((()=>{const t=[...e];t.sort(((e,t)=>new Date(e.startTime).getTime()-new Date(t.startTime).getTime())),fe(t)}),[e]);T((()=>{const e=[];for(const t of Te){const r=a(new Date(t.endTime),new Date(t.startTime));let n=Math.floor(r/(h+_))-1;for(;n>=0;){const r={availableTimeslot:t,startTime:o(new Date(t.startTime),n*(h+_))};e.push(r),n--}}p&&me(p);const t=e.sort(((e,t)=>e.startTime.getTime()-t.startTime.getTime()));be(t)}),[Te,h,_,p]),T((()=>{var e;const t=[];for(const e of ge)n(e.startTime,se)&&0===t.filter((t=>i(t.startTime,e.startTime))).length&&(l(e.startTime)||t.push(e));const r=t.sort(((e,t)=>e.startTime.getTime()-t.startTime.getTime())),a=null===(e=ge.find((e=>c(e.startTime,se))))||void 0===e?void 0:e.startTime;ge.length>0&&R&&!a&&0===r.length&&R(se),ve(a),pe(r)}),[se,ge]);return x.createElement(O,{className:u,$primaryColorRGB:te,$borderRadius:b,style:Q,$backgroundColorContrastRGB:ie,$textColorRGB:oe,$backgroundColorRGB:re,$primaryColorContrastRGB:ne,$calendarColoredTextRGB:le},x.createElement(U,null,x.createElement(V,null,x.createElement(K,null,x.createElement(P,{type:"button",className:"rsm-arrow-button",onClick:()=>{me(d(se,1))}},x.createElement(k,{direction:"back"})),x.createElement(J,{className:"rsm-date-title"},r(se,S,{locale:j})),x.createElement(P,{type:"button",className:"rsm-arrow-button",onClick:()=>{me(s(se,1))}},x.createElement(k,{direction:"forward"}))),x.createElement(C,{locale:j,selectedDay:se,startTimeEventsList:ge,onDaySelected:e=>{me(e),G&&G(e)}})),x.createElement(H,null),x.createElement(W,null,x.createElement(q,null,x.createElement(K,null,x.createElement(P,{type:"button",className:"rsm-arrow-button",onClick:()=>{me(m(se,1))}},x.createElement(k,{direction:"back"})),x.createElement(J,{className:"rsm-date-title"},r(se,E,{locale:j})),x.createElement(P,{type:"button",className:"rsm-arrow-button",onClick:()=>{me(g(se,1))}},x.createElement(k,{direction:"forward"}))),x.createElement(I,{skipConfirmCheck:Y,selectedDay:se,selectedStartTime:ce,locale:j,format_nextFutureStartTimeAvailableFormatString:w,nextFutureStartTimeAvailable:xe,lang_goToNextAvailableDayText:$,lang_noFutureTimesText:F,onGoToNextAvailableDayClick:()=>{xe&&me(xe)},lang_confirmButtonText:N,lang_cancelButtonText:B,lang_emptyListText:L,lang_selectedButtonText:z,emptyListContentEl:y,onStartTimeSelect:e=>{const t=(e=>{const t=[null,null],r=a(e.startTime,new Date(e.availableTimeslot.startTime));if(0!==r){const a={oldId:e.availableTimeslot.id,startTime:e.availableTimeslot.startTime,endTime:o(new Date(e.availableTimeslot.startTime),r)};t[0]=a}const n=o(new Date(e.availableTimeslot.startTime),r+h);if(0!==a(n,new Date(e.availableTimeslot.endTime))){const r={oldId:e.availableTimeslot.id,startTime:n,endTime:e.availableTimeslot.endTime};t[1]=r}return t})(e),r=Object.assign(Object.assign({},e),{splitTimeslot:t,resetDate:()=>me(p||new Date),resetSelectedTimeState:()=>de(void 0)});de(e.startTime.getTime()),A&&A(r)},startTimeListItems:ue,format_startTimeFormatString:D,startTimeListStyle:Z,setSelectedStartTime:de})))))};function X(e,t){if(!e||!t)return[];const r=[...e],a=[...t];r.sort(((e,t)=>new Date(e.startTime).getTime()-new Date(t.startTime).getTime()));let o=0;for(;o<r.length;){const e=r[o];try{const t=new Date(e.startTime),n=new Date(e.endTime);"string"==typeof e.startTime&&(e.startTime=t),"string"==typeof e.endTime&&(e.endTime=n);for(const i of a)try{const a=new Date(i.startTime),l=new Date(i.endTime);if("string"==typeof i.startTime&&(i.startTime=a),"string"==typeof i.endTime&&(i.endTime=l),b(a,t)||u(a,t))b(t,l)&&(b(l,n)?e.startTime=l:(r.splice(o,1),o--));else if(b(a,n))if(b(l,n)){const t=Object.assign(Object.assign({},e),{startTime:l});e.endTime=a,r.splice(o+1,0,t),o--}else e.endTime=a}catch(e){throw console.error("Invalid Date for unavailable slot: ",i),e}}catch(t){throw console.error("Invalid Date for available slot: ",e),t}o++}return r}export{Q as ScheduleMeeting,X as timeSlotDifference};

@@ -156,13 +156,8 @@ const StartTimeList: React.FC<Props> = ({
     setSelectedItemIndex(-1);
   }, [selectedDay]);
 
-  const _onStartTimeSelect = (startTimeEvent: StartTimeEvent, index: number) => {
-    if (skipConfirmCheck || selectedItemIndex === index) {
-      onStartTimeSelect(startTimeEvent);
-      setSelectedItemIndex(-1);
-    } else {
-      setSelectedItemIndex(index);
-    }
+  const _onStartTimeSelect = (startTimeEvent: StartTimeEvent) => {
+    onStartTimeSelect(startTimeEvent);
   };
 
   const emptyListElement = (
@@ -219,7 +214,7 @@ const StartTimeList: React.FC<Props> = ({
                   selected={Boolean(selectedStartTime && selectedStartTime === startTimeEvent.startTime.getTime())}
                   confirmState={i === selectedItemIndex}
                   startTimeEvent={startTimeEvent}
-                  onStartTimeSelect={() => _onStartTimeSelect(startTimeEvent, i)}
+                  onStartTimeSelect={() => _onStartTimeSelect(startTimeEvent)}
                 />
                 {i !== startTimeListItems.length - 1 && (
                   <ListItemDivider makeTransparent={selectedItemIndex === i || selectedItemIndex === i + 1} />

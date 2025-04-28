@@ -62,15 +62,8 @@ const StartTimeListItem: React.FC<Props> = ({
         selected={Boolean(selected || confirmState)}
         onClick={onStartTimeSelect}
       >
-        {confirmState && !selected && `${lang_confirmButtonText} `}
-        {selected && `${lang_selectedButtonText} `}
         {format(startTimeEvent.startTime, format_startTimeFormatString, { locale })}
       </ThemedButton>
-      {(confirmState || selected) && (
-        <CancelButton type="button" className="rsm-cancel-button" onClick={onCancelClicked}>
-          {lang_cancelButtonText}
-        </CancelButton>
-      )}
     </Container>
   );
 };
